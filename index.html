@@ -3,136 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME TO MY MIND</title>
+    <title>👁️ THE VOID IS WATCHING 👁️</title>
     <style>
+        * {
+            box-sizing: border-box;
+            cursor: crosshair;
+        }
         body {
-            background-color: #000000;
-            color: #00ff66;
+            background-color: #050000;
+            color: #ff0033;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
+            padding: 20px;
             overflow-x: hidden;
-            padding: 50px;
+            background-image: linear-gradient(rgba(18, 0, 0, 0.3) 1px, transparent 1px);
+            background-size: 100% 4px;
         }
-        .container {
+        /* Flickering red overlay for sensory corruption */
+        .static-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 0, 0, 0.02);
+            pointer-events: none;
+            z-index: 999;
+            animation: glitch-flash 0.1s infinite;
+        }
+        .main-frame {
             position: relative;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            z-index: 2;
+            border: 3px double #ff0033;
+            padding: 40px;
+            background-color: #000000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
         }
         h1 {
-            font-size: 3.5rem;
-            color: #ff0055;
-            text-shadow: 3px 3px #330011;
-            letter-spacing: -2px;
-            margin-bottom: 0;
+            font-size: 3rem;
+            color: #ffffff;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 4px 4px #ff0033, -4px -4px #00ffff;
+            animation: tremble 0.2s infinite;
+            margin-top: 0;
         }
-        h2 {
-            font-size: 1.8rem;
+        .subtitle {
+            text-align: center;
             color: #00ffff;
-            background: #111;
-            display: inline-block;
-            padding: 5px 10px;
+            font-weight: bold;
+            background: #1a0005;
+            padding: 5px;
+            border: 1px solid #00ffff;
+            letter-spacing: 2px;
         }
         p {
             font-size: 1.1rem;
-            line-height: 1.6;
-            max-width: 600px;
+            line-height: 1.8;
+            color: #cccccc;
+            text-shadow: 1px 1px #220000;
         }
-        .glitch-bg {
-            position: fixed;
-            top: 20%;
-            right: 5%;
-            font-size: 8rem;
-            color: rgba(255, 0, 85, 0.04);
-            font-weight: bold;
-            user-select: none;
-            pointer-events: none;
-            z-index: 1;
-            font-family: sans-serif;
-        }
-        .hidden-link {
+        /* Disturbing floating text element */
+        .erratic-manifesto {
+            position: absolute;
+            background: #ff0033;
             color: #000000;
-            text-decoration: none;
-            cursor: default;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.2rem;
+            transform: rotate(-5deg);
+            border: 2px solid #fff;
+            top: 250px;
+            right: -30px;
+            max-width: 250px;
+            animation: warp 4s infinite alternate;
         }
-        .hidden-link:hover {
-            color: #1a0008;
-            background-color: #ff0055;
+        .hyperfixations {
+            margin: 40px 0;
+            padding: 20px;
+            background: #0a0002;
+            border-left: 5px solid #ff0033;
         }
-        .data-stream {
-            font-size: 0.8rem;
-            color: #444444;
-            word-break: break-all;
-            margin-top: 100px;
-            border-top: 1px dashed #222;
-            padding-top: 20px;
-        }
-        ul {
-            list-style-type: square;
+        .hyperfixations li {
+            margin-bottom: 12px;
             color: #ffcc00;
+            font-size: 1.1rem;
         }
-        .status-pulse {
-            background-color: #ff0055; 
-            color: white; 
-            padding: 2px 5px;
-            animation: blink 0.8s infinite alternate;
+        .hidden-trap {
+            color: #110003;
+            text-decoration: none;
+            transition: color 0.1s;
         }
-        @keyframes blink {
-            0% { opacity: 0.3; }
-            100% { opacity: 1; }
+        .hidden-trap:hover {
+            color: #ffffff;
+            background: #ff0033;
+            text-shadow: none;
+        }
+        .terminal-stream {
+            font-size: 0.75rem;
+            color: #441111;
+            word-break: break-all;
+            margin-top: 80px;
+            border-top: 2px dotted #ff0033;
+            padding-top: 20px;
+            line-height: 1.2;
+        }
+        /* Chaotic Animations */
+        @keyframes tremble {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            50% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+            100% { transform: translate(1px, -1px) rotate(0.5deg); }
+        }
+        @keyframes glitch-flash {
+            0% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.3; }
+        }
+        @keyframes warp {
+            0% { transform: rotate(-5deg) scale(1); }
+            100% { transform: rotate(3deg) scale(1.05); border-color: #00ffff; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Ambient background text layer -->
-    <div class="glitch-bg" id="bg-glitch">OVERLOAD</div>
+    <div class="static-overlay"></div>
 
-    <div class="container">
+    <div class="main-frame">
         <h1>WELCOME TO MY MIND</h1>
-        <h2>[ AUTISM MIND V.1.003 ]</h2>
+        <div class="subtitle">[ AUTISM MIND // INTERFACE_CRITICAL ]</div>
         
         <p style="margin-top: 40px;">
-            You have bypassed the standard social filters. The processing speed here is non-linear. 
-            Information does not compile sequentially; it arrives all at once, in high definition, 
-            unfiltered, and burning.
+            The social filters have completely melted away. There is no sequence here. 
+            There is no quiet. Information floods the chamber all at once—vivid, high-velocity, 
+            unmasked, and raw.
         </p>
+
+        <div class="erratic-manifesto">
+            WARNING: SYSTEM RUNNING AT 400% CAPACITY
+        </div>
 
         <p>
-            The pattern recognition engine is currently: <span class="status-pulse">ACTIVE</span>.
+            Pattern Recognition Engine status: 
+            <span style="color: #000; background: #ff0033; padding: 0 6px; font-weight: bold; animation: tremble 0.1s infinite;">
+                UNCONTAINED
+            </span>
         </p>
 
-        <h3 style="color: #00ffff; margin-top: 60px;">CURRENT HYPERFIXATION STACKS</h3>
-        <ul>
-            <li>System Architecture & Net Art Archeology</li>
-            <li>Unspoken Social Scripts (Decompiled)</li>
-            <li>Acoustic Resonance of Empty Spaces</li>
-            <li>The Architecture of Subfolders</li>
-        </ul>
+        <div class="hyperfixations">
+            <h3 style="color: #00ffff; margin-top: 0; letter-spacing: 1px;">HYPERFIXATION OVERFLOW:</h3>
+            <ul>
+                <li>Decompiled social rituals and empty processing scripts</li>
+                <li>The physical weight of high-frequency background noise</li>
+                <li>Cataloging hidden pathways inside plain sight structures</li>
+                <li>Uncompromising obsession with perfect symmetry</li>
+            </ul>
+        </div>
 
-        <p style="margin-top: 50px;">
-            Do not look for a traditional navigation menu. The exit door is disguised as a typo. 
-            Clicking blindly will only pull you <a href="depths.html" class="hidden-link">deeper</a> into the sub-routines.
+        <p>
+            Do not search for standard navigation links. There is no escape menu. 
+            If you touch the wrong hidden anomaly, you will sink <a href="depths.html" class="hidden-trap">deeper into the sub-routines</a>.
         </p>
 
-        <!-- Hidden anchor text for net art maze mapping -->
-        <p class="data-stream">
-            LOG_SHUTDOWN_SEQUENCE_FAILED_0x00219A9 // Patterns repeating // 
-            The noise is too loud but the structure is perfectly symmetrical // 
-            <a href="archive.html" style="color: #333; text-decoration: none;">[REDACTED_NODE]</a> 
-            // End of public transmission.
-        </p>
+        <div class="terminal-stream">
+            CRITICAL_ERR_0x009F // SENSORY_OVERLOAD // EVERYTHING_IS_CONNECTED // 
+            THEY_THINK_IT_IS_QUIET_BUT_IT_SCREAMS // 
+            <a href="archive.html" style="color: #660011; text-decoration: underline;">[BREACH_NODE_09]</a> 
+            // METRIC OVERFLOW // SHUTTING DOWN INPUT RECEPTORS...
+        </div>
     </div>
-
-    <!-- Script to dynamically cycle background glitch words -->
-    <script>
-        const words = ["OVERLOAD", "PATTERNS", "SIGNAL", "UNFILTERED", "NOISE", "DEPTHS"];
-        const element = document.getElementById("bg-glitch");
-        setInterval(() => {
-            const randomWord = words[Math.floor(Math.random() * words.length)];
-            element.innerText = randomWord;
-        }, 3000);
-    </script>
 
 </body>
 </html>
