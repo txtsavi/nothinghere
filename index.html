@@ -38,70 +38,24 @@
             margin-bottom: 30px;
             letter-spacing: 2px;
         }
-        /* Grid simulating damaged, hanging polaroids or pictures */
-        .photo-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-            gap: 20px;
-        }
-        .photo-placeholder {
-            width: 220px;
-            height: 280px;
-            background: #111111;
-            border: 5px solid #ffffff;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            transform: rotate(-3deg);
-            transition: transform 0.3s;
-        }
-        .photo-placeholder:nth-child(2) {
-            transform: rotate(4deg);
-            border-color: #e0e0e0;
-        }
-        .photo-placeholder:nth-child(3) {
-            transform: rotate(-2deg);
-            border-color: #cccccc;
-        }
-        .photo-placeholder:hover {
-            transform: rotate(0deg) scale(1.05);
-            border-color: #ff3333;
-        }
-        .inner-canvas {
-            width: 100%;
-            height: 80%;
-            background: #020202;
-            border: 1px solid #222;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            color: #333;
-            font-weight: bold;
+        /* Embedded Document Frame Wrapper */
+        .video-wrapper {
             position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
             overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+            margin-bottom: 40px;
+            background: #111;
         }
-        /* Simulates a glitched, distorted doll eye inside the canvas */
-        .inner-canvas::before {
-            content: '👁️';
-            font-size: 2.5rem;
-            opacity: 0.25;
-            animation: lookAround 4s infinite alternate;
-        }
-        .photo-caption {
-            font-size: 0.75rem;
-            color: #000000;
-            background: #ffffff;
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            text-align: center;
-            padding: 2px;
-            font-weight: bold;
-            font-family: sans-serif;
+            height: 100%;
+            border: 0;
         }
         p {
             line-height: 1.8;
@@ -124,10 +78,16 @@
             color: #ffffff;
             background: #ff3333;
         }
-        @keyframes lookAround {
-            0% { transform: translate(-5px, 0); }
-            50% { transform: translate(5px, 5px) scale(1.1); color: #ff0000; }
-            100% { transform: translate(0, -5px); }
+        .flicker-alert {
+            color: #ffcc00;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -137,20 +97,16 @@
         <h1>LA ISLA DE LAS MUÑECAS</h1>
         <div class="location-tag">[ XOCHIMILCO // MEXICO // COGNITIVE_NODE ]</div>
 
-        <!-- Visual section showcasing the "hanging doll" artifacts -->
-        <div class="photo-grid">
-            <div class="photo-placeholder">
-                <div class="inner-canvas"></div>
-                <div class="photo-caption">ARTIFACT_01.JPG</div>
-            </div>
-            <div class="photo-placeholder">
-                <div class="inner-canvas" style="color: #ff3333;"></div>
-                <div class="photo-caption">CANAL_MAPPED.JPG</div>
-            </div>
-            <div class="photo-placeholder">
-                <div class="inner-canvas"></div>
-                <div class="photo-caption">TREE_WITNESS.JPG</div>
-            </div>
+        <div class="flicker-alert">&gt;&gt; PLAY RETRIEVED VIDEO FILE TO INITIALIZE TIMELINE &lt;&lt;</div>
+
+        <!-- Embedded YouTube Documentary Frame -->
+        <div class="video-wrapper">
+            <iframe 
+                src="https://youtube.com" 
+                title="Isla de las Muñecas Documentary"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
         </div>
 
         <p><strong>THE CARETAKER'S LOG // SYSTEM OVERWRITE</strong></p>
@@ -173,7 +129,7 @@
 
         <div class="terminal-logs">
             &gt;&gt; SYSTEM_STATUS: COUNTING_THE_WATCHERS<br>
-            &gt;&gt; Patterns repeating in the dark // Hundreds of eyes tracking the cursor // <br>
+            &gt;&gt; Archive loop video feed online // Broadcaster synchronized // <br>
             &gt;&gt; LOG_TERMINATED_0x00F3
         </div>
     </div>
