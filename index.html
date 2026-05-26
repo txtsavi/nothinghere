@@ -6,88 +6,83 @@
     <title>👁️ ISLA DE LAS MUÑECAS 👁️</title>
     <style>
         body {
-            background-color: #050505;
-            color: #ff3333;
+            background-color: #020000;
+            color: #e60000;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
-            padding: 40px 20px;
+            padding: 30px 15px;
             overflow-x: hidden;
-            background-image: linear-gradient(rgba(10, 5, 5, 0.5) 1px, transparent 1px);
-            background-size: 100% 4px;
+            background-image: linear-gradient(rgba(15, 0, 0, 0.7) 1px, transparent 1px);
+            background-size: 100% 3px;
         }
         .container {
-            max-width: 800px;
+            max-width: 780px;
             margin: 0 auto;
-            border: 3px double #ff3333;
+            border: 2px solid #ff0000;
             background: #000000;
-            padding: 30px;
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+            padding: 25px;
+            box-shadow: inset 0 0 20px #330000;
         }
         h1 {
-            font-size: 2.8rem;
+            font-size: 2.4rem;
             color: #ffffff;
             text-align: center;
-            letter-spacing: 4px;
-            text-shadow: 3px 3px #ff3333;
-            margin-bottom: 5px;
-        }
-        .location-tag {
-            text-align: center;
-            color: #00ffff;
-            font-size: 1rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px #ff0000;
+            margin-top: 0;
             margin-bottom: 30px;
-            letter-spacing: 2px;
         }
-        /* Embedded Document Frame Wrapper */
-        .video-wrapper {
+        /* Raw, non-standard layout framework for the video */
+        .video-box {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border: 4px solid #ffffff;
-            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
-            margin-bottom: 40px;
-            background: #111;
+            border: 3px dashed #ff0000;
+            margin: 20px 0 35px 0;
+            background: #050505;
         }
-        .video-wrapper iframe {
+        .video-box iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             border: 0;
         }
         p {
-            line-height: 1.8;
-            color: #dddddd;
-            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #b0b0b0;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            word-spacing: -1px;
+        }
+        .raw-caps {
+            color: #ffffff;
+            font-weight: bold;
+            background: #1a0000;
+            padding: 0 4px;
         }
         .terminal-logs {
-            margin-top: 40px;
-            border-top: 1px dashed #331111;
-            padding-top: 20px;
+            margin-top: 50px;
+            border-top: 2px dotted #330000;
+            padding-top: 15px;
             font-size: 0.8rem;
-            color: #555555;
+            color: #444;
         }
         a {
             color: #00ffff;
             text-decoration: underline;
-            font-weight: bold;
         }
         a:hover {
             color: #ffffff;
-            background: #ff3333;
+            background: #ff0000;
         }
-        .flicker-alert {
-            color: #ffcc00;
+        .system-ticker {
+            background: #ff0000;
+            color: #000;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 15px;
-            animation: pulse 1s infinite alternate;
-        }
-        @keyframes pulse {
-            0% { opacity: 0.4; }
-            100% { opacity: 1; }
+            padding: 3px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -95,12 +90,11 @@
 
     <div class="container">
         <h1>LA ISLA DE LAS MUÑECAS</h1>
-        <div class="location-tag">[ XOCHIMILCO // MEXICO // COGNITIVE_NODE ]</div>
+        
+        <div class="system-ticker">DATA_STREAM: OPEN SOURCE ARCHIVE // RECOVERY LOG</div>
 
-        <div class="flicker-alert">&gt;&gt; PLAY RETRIEVED VIDEO FILE TO INITIALIZE TIMELINE &lt;&lt;</div>
-
-        <!-- Embedded YouTube Documentary Frame -->
-        <div class="video-wrapper">
+        <!-- Embedded Documentary Box -->
+        <div class="video-box">
             <iframe 
                 src="https://youtube.com" 
                 title="Isla de las Muñecas Documentary"
@@ -109,28 +103,26 @@
             </iframe>
         </div>
 
-        <p><strong>THE CARETAKER'S LOG // SYSTEM OVERWRITE</strong></p>
-        
         <p>
-            The legend states that decades ago, a lone traveler lost her life in the deep waters of the Xochimilco canals, far out where the water grows stagnant. Shortly after, the island's only resident caretaker, Don Julián, discovered her body washed up on the shore of the chinampa. 
+            The locals know the story but nobody wants to talk about it when the sun goes down. A traveler lost her breath out in the deep parts of the canals, right where the water gets thick and heavy and stops moving. Don Julian found what was left of her on the mud banks. He couldn't sleep after that. Every single night he heard the water moving when nothing was out there. Splash. Splash. <span class="raw-caps">RUNNING OUT OF TIME.</span>
         </p>
 
         <p>
-            Driven by an overwhelming sense of guilt and an inability to silence the phantom splashing sounds echoing from the water at night, Julián found a discarded doll floating down the exact same canal. Believing it was possessed by the traveler's spirit, he hung it from a tree branch to bring peace to the water.
+            He found an old plastic doll floating down the current right where she went under. He tied it to a tree branch. He thought it would keep her quiet. He thought it would stop the noises in his head. It didn't work. One doll wasn't enough to fix the balance.
         </p>
 
         <p>
-            One doll became hundreds. For fifty years, he collected thousands of severed, decaying plastic eyes, broken limbs, and hollow heads, turning the entire island into a physical monument of sensory overload. The trees became crowded with watchers, completely altering the structure of the landscape until Julian himself was found in the exact same spot down by the water.
+            For fifty straight years he dragged trash out of the waste piles. Ripped plastic limbs. Hollow heads with the eyes missing. Mud stuck inside their synthetic hair. He hung thousands of them from the branches until the whole island was covered in plastic faces staring out at the river. Then they found Julian. In the exact same spot on the shore. Dead in the water. <span class="raw-caps">THE LOOP FIXED ITSELF.</span>
         </p>
 
         <p style="margin-top: 40px;">
-            The frequency of the island is bleeding directly into your local machine interface. To examine the raw data dumps, you can bypass this node and enter the <a href="archive.html">unmasked audio archive</a> or sink further down into the <a href="depths.html">structural memory sub-routines</a>.
+            The signal is rotting out the lower pathways of this server node. If you want to see the unedited files click the <a href="archive.html">unmasked audio archive</a> or drop down into the lower <a href="depths.html">memory sub-routines</a> before the connection snaps.
         </p>
 
         <div class="terminal-logs">
-            &gt;&gt; SYSTEM_STATUS: COUNTING_THE_WATCHERS<br>
-            &gt;&gt; Archive loop video feed online // Broadcaster synchronized // <br>
-            &gt;&gt; LOG_TERMINATED_0x00F3
+            &gt;&gt; LOG_FILE: 1951_2001_TERMINAL<br>
+            &gt;&gt; The eyes are still tracking the pointer...<br>
+            &gt;&gt; [ SHUTDOWN CODE: FAIL_SAFE_VOID ]
         </div>
     </div>
 
