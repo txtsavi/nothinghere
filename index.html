@@ -3,171 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👁️ THE VOID IS WATCHING 👁️</title>
+    <title>👁️ ISLA DE LAS MUÑECAS 👁️</title>
     <style>
-        * {
-            box-sizing: border-box;
-            cursor: crosshair;
-        }
         body {
-            background-color: #050000;
-            color: #ff0033;
+            background-color: #050505;
+            color: #ff3333;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             overflow-x: hidden;
-            background-image: linear-gradient(rgba(18, 0, 0, 0.3) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(10, 5, 5, 0.5) 1px, transparent 1px);
             background-size: 100% 4px;
         }
-        /* Flickering red overlay for sensory corruption */
-        .static-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 0, 0, 0.02);
-            pointer-events: none;
-            z-index: 999;
-            animation: glitch-flash 0.1s infinite;
-        }
-        .main-frame {
-            position: relative;
-            max-width: 900px;
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            border: 3px double #ff0033;
-            padding: 40px;
-            background-color: #000000;
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+            border: 3px double #ff3333;
+            background: #000000;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: #ffffff;
             text-align: center;
-            letter-spacing: 5px;
-            text-shadow: 4px 4px #ff0033, -4px -4px #00ffff;
-            animation: tremble 0.2s infinite;
-            margin-top: 0;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px #ff3333;
+            margin-bottom: 5px;
         }
-        .subtitle {
+        .location-tag {
             text-align: center;
             color: #00ffff;
-            font-weight: bold;
-            background: #1a0005;
-            padding: 5px;
-            border: 1px solid #00ffff;
+            font-size: 1rem;
+            margin-bottom: 30px;
             letter-spacing: 2px;
         }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #cccccc;
-            text-shadow: 1px 1px #220000;
+        /* Grid simulating damaged, hanging polaroids or pictures */
+        .photo-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            gap: 20px;
         }
-        /* Disturbing floating text element */
-        .erratic-manifesto {
-            position: absolute;
-            background: #ff0033;
-            color: #000000;
-            font-weight: bold;
+        .photo-placeholder {
+            width: 220px;
+            height: 280px;
+            background: #111111;
+            border: 5px solid #ffffff;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
             padding: 10px;
-            font-size: 1.2rem;
-            transform: rotate(-5deg);
-            border: 2px solid #fff;
-            top: 250px;
-            right: -30px;
-            max-width: 250px;
-            animation: warp 4s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            transform: rotate(-3deg);
+            transition: transform 0.3s;
         }
-        .hyperfixations {
-            margin: 40px 0;
-            padding: 20px;
-            background: #0a0002;
-            border-left: 5px solid #ff0033;
+        .photo-placeholder:nth-child(2) {
+            transform: rotate(4deg);
+            border-color: #e0e0e0;
         }
-        .hyperfixations li {
-            margin-bottom: 12px;
-            color: #ffcc00;
-            font-size: 1.1rem;
+        .photo-placeholder:nth-child(3) {
+            transform: rotate(-2deg);
+            border-color: #cccccc;
         }
-        .hidden-trap {
-            color: #110003;
-            text-decoration: none;
-            transition: color 0.1s;
+        .photo-placeholder:hover {
+            transform: rotate(0deg) scale(1.05);
+            border-color: #ff3333;
         }
-        .hidden-trap:hover {
-            color: #ffffff;
-            background: #ff0033;
-            text-shadow: none;
+        .inner-canvas {
+            width: 100%;
+            height: 80%;
+            background: #020202;
+            border: 1px solid #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
         }
-        .terminal-stream {
+        /* Simulates a glitched, distorted doll eye inside the canvas */
+        .inner-canvas::before {
+            content: '👁️';
+            font-size: 2.5rem;
+            opacity: 0.25;
+            animation: lookAround 4s infinite alternate;
+        }
+        .photo-caption {
             font-size: 0.75rem;
-            color: #441111;
-            word-break: break-all;
-            margin-top: 80px;
-            border-top: 2px dotted #ff0033;
+            color: #000000;
+            background: #ffffff;
+            width: 100%;
+            text-align: center;
+            padding: 2px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        p {
+            line-height: 1.8;
+            color: #dddddd;
+            font-size: 1.05rem;
+        }
+        .terminal-logs {
+            margin-top: 40px;
+            border-top: 1px dashed #331111;
             padding-top: 20px;
-            line-height: 1.2;
+            font-size: 0.8rem;
+            color: #555555;
         }
-        /* Chaotic Animations */
-        @keyframes tremble {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            50% { transform: translate(-1px, -1px) rotate(-0.5deg); }
-            100% { transform: translate(1px, -1px) rotate(0.5deg); }
+        a {
+            color: #00ffff;
+            text-decoration: underline;
+            font-weight: bold;
         }
-        @keyframes glitch-flash {
-            0% { opacity: 0.5; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.3; }
+        a:hover {
+            color: #ffffff;
+            background: #ff3333;
         }
-        @keyframes warp {
-            0% { transform: rotate(-5deg) scale(1); }
-            100% { transform: rotate(3deg) scale(1.05); border-color: #00ffff; }
+        @keyframes lookAround {
+            0% { transform: translate(-5px, 0); }
+            50% { transform: translate(5px, 5px) scale(1.1); color: #ff0000; }
+            100% { transform: translate(0, -5px); }
         }
     </style>
 </head>
 <body>
 
-    <div class="static-overlay"></div>
+    <div class="container">
+        <h1>LA ISLA DE LAS MUÑECAS</h1>
+        <div class="location-tag">[ XOCHIMILCO // MEXICO // COGNITIVE_NODE ]</div>
 
-    <div class="main-frame">
-        <h1>WELCOME TO MY MIND</h1>
-        <div class="subtitle">[ AUTISM MIND // INTERFACE_CRITICAL ]</div>
+        <!-- Visual section showcasing the "hanging doll" artifacts -->
+        <div class="photo-grid">
+            <div class="photo-placeholder">
+                <div class="inner-canvas"></div>
+                <div class="photo-caption">ARTIFACT_01.JPG</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="inner-canvas" style="color: #ff3333;"></div>
+                <div class="photo-caption">CANAL_MAPPED.JPG</div>
+            </div>
+            <div class="photo-placeholder">
+                <div class="inner-canvas"></div>
+                <div class="photo-caption">TREE_WITNESS.JPG</div>
+            </div>
+        </div>
+
+        <p><strong>THE CARETAKER'S LOG // SYSTEM OVERWRITE</strong></p>
         
+        <p>
+            The legend states that decades ago, a lone traveler lost her life in the deep waters of the Xochimilco canals, far out where the water grows stagnant. Shortly after, the island's only resident caretaker, Don Julián, discovered her body washed up on the shore of the chinampa. 
+        </p>
+
+        <p>
+            Driven by an overwhelming sense of guilt and an inability to silence the phantom splashing sounds echoing from the water at night, Julián found a discarded doll floating down the exact same canal. Believing it was possessed by the traveler's spirit, he hung it from a tree branch to bring peace to the water.
+        </p>
+
+        <p>
+            One doll became hundreds. For fifty years, he collected thousands of severed, decaying plastic eyes, broken limbs, and hollow heads, turning the entire island into a physical monument of sensory overload. The trees became crowded with watchers, completely altering the structure of the landscape until Julian himself was found in the exact same spot down by the water.
+        </p>
+
         <p style="margin-top: 40px;">
-            The social filters have completely melted away. There is no sequence here. 
-            There is no quiet. Information floods the chamber all at once—vivid, high-velocity, 
-            unmasked, and raw.
+            The frequency of the island is bleeding directly into your local machine interface. To examine the raw data dumps, you can bypass this node and enter the <a href="archive.html">unmasked audio archive</a> or sink further down into the <a href="depths.html">structural memory sub-routines</a>.
         </p>
 
-        <div class="erratic-manifesto">
-            WARNING: SYSTEM RUNNING AT 400% CAPACITY
-        </div>
-
-        <p>
-            Pattern Recognition Engine status: 
-            <span style="color: #000; background: #ff0033; padding: 0 6px; font-weight: bold; animation: tremble 0.1s infinite;">
-                UNCONTAINED
-            </span>
-        </p>
-
-        <div class="hyperfixations">
-            <h3 style="color: #00ffff; margin-top: 0; letter-spacing: 1px;">HYPERFIXATION OVERFLOW:</h3>
-            <ul>
-                <li>Decompiled social rituals and empty processing scripts</li>
-                <li>The physical weight of high-frequency background noise</li>
-                <li>Cataloging hidden pathways inside plain sight structures</li>
-                <li>Uncompromising obsession with perfect symmetry</li>
-            </ul>
-        </div>
-
-        <p>
-            Do not search for standard navigation links. There is no escape menu. 
-            If you touch the wrong hidden anomaly, you will sink <a href="depths.html" class="hidden-trap">deeper into the sub-routines</a>.
-        </p>
-
-        <div class="terminal-stream">
-            CRITICAL_ERR_0x009F // SENSORY_OVERLOAD // EVERYTHING_IS_CONNECTED // 
-            THEY_THINK_IT_IS_QUIET_BUT_IT_SCREAMS // 
-            <a href="archive.html" style="color: #660011; text-decoration: underline;">[BREACH_NODE_09]</a> 
-            // METRIC OVERFLOW // SHUTTING DOWN INPUT RECEPTORS...
+        <div class="terminal-logs">
+            &gt;&gt; SYSTEM_STATUS: COUNTING_THE_WATCHERS<br>
+            &gt;&gt; Patterns repeating in the dark // Hundreds of eyes tracking the cursor // <br>
+            &gt;&gt; LOG_TERMINATED_0x00F3
         </div>
     </div>
 
